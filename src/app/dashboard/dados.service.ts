@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { observable, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class DadosService {
 
    obterDados(): Observable<any> {
      return new Observable(observable => {
-      observable.next(this.dados);
+      observable.next(this.dados);    // next faz o retorno dos dados //
       observable.complete();
 
      });
